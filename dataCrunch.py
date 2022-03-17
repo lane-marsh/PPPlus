@@ -1,5 +1,6 @@
 import csv
 
+
 class ObjectifyCSV(object):
     """
     object for parsing a csv file
@@ -66,5 +67,5 @@ if __name__ == "__main__":
     test = ObjectifyCSV('data/listings.csv')
 
     QA = test.get_by_field({'CITY': 'Seattle', 'ZIP OR POSTAL CODE': '98109'}, ['ADDRESS', 'BEDS', 'PRICE'])
-    for row in QA:
-        print(row)
+    for each, city in test.data['CITY'].items():
+        print(city)

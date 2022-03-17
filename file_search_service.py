@@ -61,7 +61,6 @@ while True:
                         prices = row[5:]
                         out_share = {'city_name': instr_share['city_name'], 'done': True, "date": dates, "price": prices}
                         pickle.dump(out_share, out_fd)
-                        print(out_share)
             out_fd.close()
 
         else:
